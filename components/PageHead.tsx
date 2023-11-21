@@ -1,9 +1,9 @@
 import * as React from 'react'
-import Head from 'next/head'
+import * as config from '@/lib/notion/config'
+import * as types from '@/lib/notion/types'
 
-import * as config from '@/lib/config'
-import * as types from '@/lib/types'
-import { getSocialImageUrl } from '@/lib/get-social-image-url'
+import Head from 'next/head'
+import { getSocialImageUrl } from '@/lib/notion/get-social-image-url'
 
 export const PageHead: React.FC<
   types.PageProps & {

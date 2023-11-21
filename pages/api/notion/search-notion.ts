@@ -1,7 +1,8 @@
+import * as types from '../../../lib/notion/types'
+
 import { NextApiRequest, NextApiResponse } from 'next'
 
-import * as types from '../../lib/types'
-import { search } from '../../lib/notion'
+import { search } from '../../../lib/notion/notion'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'POST') {

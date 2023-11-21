@@ -1,6 +1,5 @@
 import type { GetServerSideProps } from 'next'
-
-import { host } from '@/lib/config'
+import { host } from '@/lib/notion/config'
 
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   if (req.method !== 'GET') {

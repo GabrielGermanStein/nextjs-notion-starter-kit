@@ -1,9 +1,7 @@
 import * as React from 'react'
+import * as config from '@/lib/notion/config'
 
 import cs from 'classnames'
-
-import * as config from '@/lib/config'
-
 import styles from './PageSocial.module.css'
 
 interface SocialLink {
