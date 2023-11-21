@@ -4,7 +4,7 @@ import { PageProps, Params } from '@/lib/notion/types'
 import { domain, isDev } from '@/lib/notion/config'
 
 import { GetStaticProps } from 'next'
-import { NotionPage } from '@/components/NotionPage'
+import { NotionPage } from '@/components/notion/NotionPage'
 import { getSiteMap } from '@/lib/notion/get-site-map'
 import { resolveNotionPage } from '@/lib/notion/resolve-notion-page'
 
