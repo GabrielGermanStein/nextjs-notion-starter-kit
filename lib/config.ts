@@ -1,3 +1,13 @@
+import {
+  NavigationStyle,
+  PageUrlOverridesInverseMap,
+  PageUrlOverridesMap,
+  Site
+} from './types'
+import { getEnv, getSiteConfig } from './get-config-value'
+
+import { NavigationLink } from './site-config'
+import { PostHogConfig } from 'posthog-js'
 /**
  * Site-wide app configuration.
  *
@@ -5,16 +15,6 @@
  * for optional depenencies.
  */
 import { parsePageId } from 'notion-utils'
-import { PostHogConfig } from 'posthog-js'
-
-import { getEnv, getSiteConfig } from './get-config-value'
-import { NavigationLink } from './site-config'
-import {
-  NavigationStyle,
-  PageUrlOverridesInverseMap,
-  PageUrlOverridesMap,
-  Site
-} from './types'
 
 export const rootNotionPageId: string = parsePageId(
   getSiteConfig('rootNotionPageId'),
@@ -142,7 +142,7 @@ export const apiHost = isDev
   ? host
   : `https://${process.env.VERCEL_URL || domain}`
 
-export const apiBaseUrl = `/api`
+export const apiBaseUrl = `/api/notion`
 
 export const api = {
   searchNotion: `${apiBaseUrl}/search-notion`,
